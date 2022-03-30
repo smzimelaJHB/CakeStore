@@ -7,14 +7,14 @@ const productRoute = require('./product')
 const resetpassRoute = require('./resetpass')
 const homeRoute = require('./home')
 
-module.exports = ()=> {
+module.exports = () => {
     router.use('/', homeRoute());
-    router.use('/register',registerRoute());
-    router.use('/contact',contactRoute());
-    router.use('/login',loginRoute());
-    router.use('/product',productRoute());
-    router.use('/resetpass',resetpassRoute());
-    
+    router.use('/register', registerRoute());
+    router.use('/contact', contactRoute());
+    router.use('/login', loginRoute());
+    router.use('/product', productRoute());
+    router.use('/resetpass', resetpassRoute());
+    router.use('/list_cakes', productRoute());
+
     return router
 }
-

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html style="background-image: url('img/icons/jason-leung-fXAuCMEYGY4-unsplash.jpg'); background-size: cover;">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Home - Amie Gie Bakery</title>
+    <!-- <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cabin:700">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+    <link rel="stylesheet" href="css/product.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Merienda:wght@700&family=Viga&display=swap" rel="stylesheet">
+    <!--  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta2/js/bootstrap.bundle.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+    <script defer src="js/script.min.js"></script> -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/mvelase.css">
+</head>
+
+<body class="body">
+    <div class="header">
+
+        <!-- Mobile -->
+        <div class="mobile">
+            <div class="horizotal">
+                <a href="index" class="active">Logo</a>
+                <div id="myLinks">
+                    <a href="login">login</a>
+                    <a href="contact">Contact</a>
+                    <a href="register">Register</a>
+                </div>
+                <a href="javascript:void(0);" class="icon" onclick="menu()">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </div>
+        </div>
+
+        <!-- Desktop -->
+        <div class="desktop">
+            <div class="bar">
+                <div class="left">
+                    <div class="home">
+                        <div>
+                            <a href="index">
+                                <h5>Home</h5>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="gallery">
+                        <div>
+                            <a href="login">
+                                <h5>Login</h5>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="logo">
+                    <div>
+                        <a href="index">
+                            <img src="img/avatars/LogoB.png" style="width:150px">
+                        </a>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="about">
+                        <div>
+                            <a href="register">
+                                <h5>register</h5>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="contact">
+                        <div>
+                            <a href="contact">
+                                <h5>Contact</5>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- <header style="background-image:url('img/avatars/xxbig.png'); background-repeat: repeat-x; width:100%;height:50%; background-repeat: no-repeat; background-position: center center; margin-top:0px; padding-top:0px;"> -->
+    <!-- </header>  -->
+    <!-- <img src="img/avatars/xxbig.png" alt="" style="width:100%; display:flex;"> -->
+    <div style="margin-top: 2%;"></div>
+    <!-- Images -->
+    <div class="allPro flex x-center wrap" style="margin-top:0px; padding-top:0px;">
+        <% for(var i = 0; i < products.length ; i++) { %>
+            <div class="product flex">
+                <div class="box" style="padding: 7%;">
+                    <div class="description flex"><span style="text-align:center;"><%= products[i].name %></span></div>
+                    <img class="productimage" src="img/cakes/<%= products[i].image %>" style=" min-width:200px; max-width:200px; min-height: 200px; max-height: 200px;" alt="cake" />
+                    <!-- <div class="box-bottom-price flex x-center">R<span class="rands"> <%= products[i].price %></td></span></div> -->
+                    <div class="space" style="height:6px;"></div>
+                    <!-- <div class="description flex"><span><%= products[i].description %></span></div> -->
+                    <div class="button-buy flex x-center"><button type="button" class="button"><a href="contact" style="text-decoration: none; color:white; font-family: 'Viga', sans-serif;">Order</a></button></div>
+                </div>
+            </div>
+            <% } %>
+    </div>
+
+    <!-- Body content end -->
+    <div class="social-space" style="display: flex; justify-content: center;">
+        <div class="social-media">
+            <div class="social">
+                <a href="#" class="fa fa-facebook icon1"></a>
+            </div>
+            <div class="social">
+                <a href="#" class="fa fa-twitter icon1"></a>
+            </div>
+            <div class="social">
+                <a href="#" class="fa fa-instagram icon"></a>
+            </div>
+            <div class="social">
+                <a href="#" class="fa fa-youtube icon"></a>
+            </div>
+        </div>
+    </div>
+
+    <div style="display: flex;  justify-content: center;">
+        <p>Copyright ©&nbsp;Logichighweb 2021</p>
+    </div>
+
+
+
+    <script>
+        function menu() {
+            var x = document.getElementById("myLinks");
+            if (x.style.display === "block") {
+                x.style.display = "none";
+            } else {
+                x.style.display = "block";
+            }
+        }
+
+        var slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {
+                slideIndex = 1
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+            setTimeout(showSlides, 4000);
+        }
+    </script>
+</body>
+
+</html>
