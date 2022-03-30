@@ -1,0 +1,121 @@
+html {
+    background-image: url('img/icons/jason-leung-fXAuCMEYGY4-unsplash.jpg');
+    background-size: cover;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+}
+
+.cake img {
+    max-width: 100%;
+    height: auto;
+}
+
+.cake {
+    background-color: aqua;
+    /* background-image: url("./xxbig.png"); */
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: relative;
+    /* opacity: 0.5; */
+    /* z-index: 1; */
+    justify-content: center;
+    /* margin-top:4%; */
+}
+
+.hr {
+    display: block;
+    background: rgb(0, 110, 255);
+    height: 1px;
+}
+
+.hr-close {
+    width: 90%;
+    /* position:relative; */
+}
+
+.imgs {
+    display: none;
+}
+
+.images {
+    display: none;
+}
+
+.image2 {
+    display: none;
+}
+
+.container {
+    /* margin-top:13%; */
+    width: 100%;
+    display: flex;
+    align-items: baseline;
+    justify-content: flex-end;
+    margin-right: 15%;
+    position: fixed;
+    z-index: 1;
+}
+
+.logo {
+    color: rgb(255, 8, 0);
+    font-weight: bolder;
+    font-size: 20px;
+    padding: 0px;
+    flex-grow: 0.25;
+}
+
+nav ul li {
+    display: inline;
+    border-radius: 4px;
+    justify-content: space-between;
+    list-style: none;
+    background-color: rgb(36, 35, 35);
+    padding: 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+nav ul li a:visited {
+    text-decoration: none;
+    color: rgb(153, 143, 143);
+}
+
+nav ul li:hover {
+    background: rgb(87, 83, 83);
+}
+
+@media only screen and (max-width: 645px) {
+    .container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    nav {
+        display: none;
+    }
+    nav ul li {
+        width: 200px;
+        margin-top: 5px;
+        display: block;
+    }
+    .container a img {
+        width: 45px;
+        height: 35px;
+        margin-top: 15px;
+    }
+    .images {
+        display: flex;
+        justify-content: flex-end;
+        overflow: hidden;
+    }
+    .imgs {
+        display: flex;
+        justify-content: flex-end;
+    }
+}

@@ -1,0 +1,67 @@
+meta(charset="utf-8")
+meta(name="viewport", content="width=device-width,initial-scale=1,shrink-to-fit=no")
+title Register - Amie Gie Bakery
+link(rel="stylesheet", href="bootstrap/css/bootstrap.min.css")
+link(rel="manifest", href="manifest.json")
+link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i")
+link(rel="stylesheet", href="fonts/fontawesome-all.min.css")
+link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css")
+link(rel="stylesheet", href="css/Navstyles.css")
+link(rel="stylesheet", href="css/Advanced-NavBar---Multi-dropdown.css")
+link(rel="stylesheet", href="fonts/simple-line-icons.min.css")
+script(defer, src="js/jquery.min.js")
+script(defer, src="bootstrap/js/bootstrap.min.js")
+script(defer, src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.js")
+script(defer, src="js/theme.js")
+script(defer, src="js/Advanced-NavBar---Multi-dropdown.js")
+
+.header2.bg-success-gradiant
+  div
+    //  Header 1 code 
+    nav.navbar.navbar-expand-lg.h2-nav
+      a.navbar-brand(href="#")
+        img(src="img/avatars/LogoB.png", alt="Amie Gie Backery",width="50px",height="50px")
+      button.navbar-toggler(type="button", data-toggle="collapse", data-target="#header2", aria-controls="header2", aria-expanded="false", aria-label="Toggle navigation")
+        span.icon-menu
+          i.fa.fa-bars
+      .collapse.navbar-collapse.hover-dropdown#header2
+        ul.navbar-nav
+          li.nav-item.active
+            a.nav-link(href="/") Home
+          li.nav-item
+            a.nav-link(href="contact") Contact
+        ul.navbar-nav.ml-auto
+          li.nav-item.active
+            a.nav-link(href="login") Login
+          li.nav-item
+            a.btn.rounded-pill.btn-dark.py-2.px-4(href="register") Sign up
+    //  End Header 1 code 
+    
+.container
+  .row.justify-content-center
+    .col-md-9.col-lg-12.col-xl-10
+      .card.shadow-lg.o-hidden.border-0.my-5
+        .card-body.p-0
+          .row
+            .col-lg-6.d-none.d-lg-flex
+              .flex-grow-1.bg-login-image(style=`background-image: url("img/cakes/bgWedding.jpg");`)
+            .col-lg-6
+              .p-5
+                .text-center
+                  h4.text-dark.mb-4 Welcome Back!
+                form.user(method="POST")
+                  .form-group
+                    input.form-control.form-control-user#exampleInputEmail(type="email", aria-describedby="emailHelp", placeholder="Enter Email Address...", name="email")
+                  .form-group
+                    input.form-control.form-control-user#exampleInputPassword(type="password", placeholder="Password", name="password")
+                  .form-group
+                    .custom-control.custom-checkbox.small
+                      .form-check
+                        input.form-check-input.custom-control-input#formCheck-1(type="checkbox")
+                        label.form-check-label.custom-control-label(for="formCheck-1") Remember Me
+                  button.btn.btn-primary.btn-block.text-white.btn-user(type="submit") Login
+                  hr
+                .text-center
+                  a.small(href="../resetpass") Forgot Password?
+                .text-center
+                  a.small(href="register") Create an Account!

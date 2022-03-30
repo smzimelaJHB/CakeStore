@@ -1,0 +1,18 @@
+<% for(var i = 0; i < products.length; i++) { %>
+<tr>
+    <td><%= i + 1 %></td>
+    <td><%= products[i].name %></td>
+    <td><%= products[i].price %></td>
+    <td><%= products[i].availability %></td>
+    <td><%= products[i].description %></td>
+    <td><%= products[i].image %></td>
+    <td>
+        <!-- <a href="/product/update_product?id=<%= products[i]._id%>" class="btn border-shadow update">
+            <span class="text-gradient"><i class="fas fa-pencil"></i></span>
+        </a> -->
+        <a href="/product/delete_product?id=<%= products[i]._id%>" class="btn border-shadow update">
+            <span class="text-gradient"><i class="fas fa-times"></i></span>
+        </a>
+    </td>
+</tr>
+<% } %>

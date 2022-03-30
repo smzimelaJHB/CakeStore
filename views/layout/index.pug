@@ -1,0 +1,19 @@
+doctype html
+html(lang="en")
+    head
+        title #{title} | #{page}
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        block links
+
+    body
+        //- h3.time=rendertime
+        //- block nav
+        //includes this file in all childrens
+        //include includes/greetings
+        block content
+
+    footer
+        block footer  
+        

@@ -1,0 +1,366 @@
+html {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.more-cakes {
+    /* display: flex; */
+    justify-content: center;
+    padding-top: 0px;
+    margin: 0px;
+    width: 40rem;
+}
+
+.image {
+    width: 80rem;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+.header {
+    margin: 0 auto;
+    width: 100%;
+    font-family: 'Copperplate Gothic Light';
+}
+
+.bar {
+    display: flex;
+}
+
+.left {
+    width: 45%;
+    display: flex;
+}
+
+.right {
+    width: 45%;
+    display: flex;
+}
+
+.logo {
+    width: 10%;
+    text-align: center;
+}
+
+.home,
+.gallery,
+.about,
+.contact {
+    width: 50%;
+    text-align: center;
+    opacity: 1;
+    margin-left: 5%;
+    margin-right: 5%;
+    font-size: larger;
+    border-bottom: 1px solid rgb(134, 29, 29);
+}
+
+@media screen and (max-width: 1250px) {
+    .home,
+    .gallery,
+    .about,
+    .contact {
+        width: 50%;
+        text-align: center;
+        margin: 25px;
+        opacity: 1;
+        font-size: larger;
+        border: none;
+    }
+}
+
+@media screen and (max-width: 875px) {
+    .logo {
+        display: none;
+    }
+}
+
+a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+
+a:hover {
+    color: red;
+    font-size: x-large;
+}
+
+@media screen and (max-width: 465px) {
+    .image {
+        width: 100%;
+        border-radius: 5px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        -ms-border-radius: 5px;
+        -o-border-radius: 5px;
+    }
+    .bar {
+        display: block;
+    }
+    .desktop {
+        display: none;
+    }
+    .mobile {
+        display: block;
+    }
+    .active {
+        color: white;
+        width: 10%
+    }
+    .horizotal {
+        overflow: hidden;
+        background-color: rgb(194, 228, 43);
+        position: relative;
+    }
+    .horizotal #myLinks {
+        display: none;
+    }
+    .horizotal a {
+        float: left;
+        color: white;
+        padding: 2% 4%;
+        text-decoration: none;
+        font-size: 15px;
+    }
+    .horizotal a.icon {
+        float: right;
+    }
+    .horizotal a:hover {
+        background-color: #ddd;
+        color: black;
+    }
+    .topnav #myLinks {
+        display: none;
+    }
+    .icon {
+        position: absolute;
+    }
+}
+
+@media screen and (min-width: 465px) {
+    .mobile {
+        display: none;
+    }
+}
+
+.body-content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    align-content: center;
+}
+
+
+/* .body-top {
+    position: absolute;
+    top: 150px;
+    opacity: 1;
+} */
+
+.footer-content {
+    min-height: 70px;
+    margin-top: 15px;
+    display: flex;
+    padding-bottom: 30px;
+}
+
+.foot {
+    margin: 0 auto;
+    width: 100%;
+    text-align: center;
+}
+
+.details {
+    text-align: left;
+}
+
+.social-media {
+    display: flex;
+    padding-top: 15px;
+}
+
+.social {
+    width: 100%;
+    font-size: 50px;
+}
+
+.icon:hover {
+    font-size: 70px;
+}
+
+.icon1:hover {
+    font-size: 70px;
+    color: blue;
+}
+
+.social-space {
+    padding-top: 20px;
+}
+
+.text {
+    max-width: 170px;
+    border: none;
+    border-bottom: 1px solid black;
+    max-height: 70px;
+    min-height: 70px;
+    min-width: 170px;
+    background-color: rgb(218, 218, 218);
+}
+
+.submit {
+    width: 170px;
+    margin-top: 10px;
+}
+
+.cake {
+    width: 150px;
+    height: 150px;
+}
+
+
+/* Slide */
+
+* {
+    box-sizing: border-box;
+}
+
+.mySlides {
+    display: none;
+}
+
+
+/* ///////////////////////////////////// */
+
+.Slide {
+    vertical-align: middle;
+    height: 150px;
+}
+
+.slideshow-container {
+    max-width: 1800px;
+    position: relative;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.text1 {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+.dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+    -webkit-transition: background-color 0.6s ease;
+    -moz-transition: background-color 0.6s ease;
+    -ms-transition: background-color 0.6s ease;
+    -o-transition: background-color 0.6s ease;
+}
+
+.active {
+    background-color: #717171;
+}
+
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
+}
+
+@media only screen and (max-width: 300px) {
+    .text {
+        font-size: 11px
+    }
+}
+
+.slider {
+    max-height: 500px;
+}
+
+.button {
+    background-color: #222;
+    border-radius: 4px;
+    border-style: none;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-family: "Farfetch Basis", "Helvetica Neue", Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.5;
+    margin: 0;
+    max-width: none;
+    min-height: 44px;
+    min-width: 10px;
+    outline: none;
+    overflow: hidden;
+    padding: 9px 20px 8px;
+    position: relative;
+    text-align: center;
+    text-transform: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: 90%;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+}
+
+.button:hover,
+.button:focus {
+    opacity: .75;
+}
+
+.allPro {
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+
+/* end */
